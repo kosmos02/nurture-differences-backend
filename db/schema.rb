@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 2021_04_21_170920) do
   end
 
   create_table "six_dimensions_cultures", force: :cascade do |t|
+    t.string "ctr"
+    t.string "country"
+    t.integer "pdi"
+    t.integer "idv"
+    t.integer "mas"
+    t.integer "uai"
+    t.integer "ltowvs"
+    t.integer "ivr"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

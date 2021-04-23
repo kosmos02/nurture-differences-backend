@@ -1,13 +1,14 @@
 class SixDimensionsCulturesController < ApplicationController
 
     def index
+        @sixd = SixDimensionsCulture.all
         
         render json: @sixd
     end
 
-    def import
-        @sixd = SixDimensionsCulture.import(params["file"])
+    def show
+        @sixd = SixDimensionsCulture.find(params[id])
 
-        render json: @sixd
+        rener json: @sixd
     end
 end
