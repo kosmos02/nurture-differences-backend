@@ -1,0 +1,2 @@
+class SixDimensionsCulture < ApplicationRecord
+end
