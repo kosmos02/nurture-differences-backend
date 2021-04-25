@@ -7,8 +7,10 @@ class SixDimensionsCulturesController < ApplicationController
     end
 
     def show
-        @sixd = SixDimensionsCulture.find(params[id])
+        uppercase_param = params[:id].upcase
+        @sixd = SixDimensionsCulture.find_by(ctr: uppercase_param)
 
-        rener json: @sixd
+        render json: @sixd
     end
+    
 end
